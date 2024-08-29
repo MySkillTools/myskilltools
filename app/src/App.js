@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from './components/NavBar/Navbar'
 
 // Styling
 //import 'bootstrap/dist/css/bootstrap.css';
@@ -22,6 +23,7 @@ const keywordGroups = [
     keywords: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
   },
   {
+
     groupName: "Experience",
     color: "#0000FF",
     keywords: ["experience", "year"]
@@ -50,19 +52,23 @@ const TextHighlighter = () => {
 
   return (
     <div>
-      <textarea
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Type or paste text here..."
-        rows="10"
-        cols="50"
-        className='form-control'
-      />
-      <button onClick={() => highlightKeywords(text)} className='btn btn-outline-primary'>Highlight</button>
-      <div
-        dangerouslySetInnerHTML={{ __html: highlightedText }}
-        style={{ whiteSpace: 'pre-wrap' }}
-      />
+        {/*
+        <Navbar />
+        */}
+    
+        <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Type or paste text here..."
+            rows="10"
+            cols="50"
+            className='form-control'
+        />
+        <button onClick={() => highlightKeywords(text)} className='btn btn-outline-primary'>Highlight</button>
+        <div
+            dangerouslySetInnerHTML={{ __html: highlightedText }}
+            style={{ whiteSpace: 'pre-wrap' }}
+        />
     </div>
   );
 };
