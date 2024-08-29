@@ -1,6 +1,6 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
-import '../../styles/style.scss';
+import { Link } from 'react-router-dom';
+//import '../../styles/style.scss';
 import './Navbar.scss';
 
 //import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -27,8 +27,6 @@ const SuperHeader = () => {
 // Navbar Component
 const Navbar = () => {
 
-    const notificationCount = 5;
-
     return (
         
         <nav className="navbar navbar-expand-md no-padding pt-0 pb-0">
@@ -39,12 +37,12 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
 
-                        {/* Home 
+                        
                         <li className="nav-item">
                             <Link className="nav-link navbar-border active" to="/">Home</Link>
                         </li>
                         
-                      
+                      {/* Home 
                         <li className="nav-item">
                             <Link className="nav-link navbar-border" to="/myOrganizations">My Organizations</Link>
                         </li>

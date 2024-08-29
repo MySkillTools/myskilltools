@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './components/NavBar/Navbar'
+import Navbar from '../../components/NavBar/Navbar'
 
 // Styling
 //import 'bootstrap/dist/css/bootstrap.css';
@@ -35,7 +35,7 @@ const keywordGroups = [
   },
 ];
 
-const TextHighlighter = () => {
+const Home = () => {
   const [text, setText] = useState('');
   const [highlightedText, setHighlightedText] = useState('');
 
@@ -52,9 +52,11 @@ const TextHighlighter = () => {
 
   return (
     <div>
-        {/*
+        
         <Navbar />
-        */}
+
+        <div>
+        
     
         <textarea
             value={text}
@@ -69,8 +71,11 @@ const TextHighlighter = () => {
             dangerouslySetInnerHTML={{ __html: highlightedText }}
             style={{ whiteSpace: 'pre-wrap' }}
         />
+        
+        </div>
+
     </div>
   );
 };
 
-export default TextHighlighter;
+export default Home;
