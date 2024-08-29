@@ -42,11 +42,11 @@ const Navbar = () => {
                             <Link className="nav-link navbar-border active" to="/">Home</Link>
                         </li>
                         
-                      {/* Home 
+                     
                         <li className="nav-item">
-                            <Link className="nav-link navbar-border" to="/myOrganizations">My Organizations</Link>
+                            <Link className="nav-link navbar-border" to="/about">About</Link>
                         </li>
-                        
+                         {/* Home 
                     
                         <li className="nav-item">
                             <Link className="nav-link navbar-border" to="/myEvents">My Events</Link>
