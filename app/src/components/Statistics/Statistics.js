@@ -27,7 +27,7 @@ const Statistics = ({ stats }) => {
                     <div className='row'>
                         {Object.keys(groupedStats).map((category, idx) => (
                             <div key={idx} className='col-xl-3 col-lg-3 col-md-6 col-xs-6 col-sm-6'> {/* Grid columns for layout */}
-                                <div className='category-section' style={{ backgroundColor: hexToRGBA(groupedStats[category].color, 0.1) }}>
+                                <div className='category-section mb-3' style={{ backgroundColor: hexToRGBA(groupedStats[category].color, 0.1) }}>
 
                                     {/* Category Name */}
                                     <span className='fw-bold' style={{ color: groupedStats[category].color }}>

@@ -31,8 +31,15 @@ const Home = () => {
         setHighlightedText(outputText);
         setStats(keywordStats);
 
-        console.log(keywordStats)
+        //console.log(keywordStats)
     };
+
+    const clearInput = () => {
+        setText('');
+        setHighlightedText('');
+        setStats([]);
+    };
+
 
     return (
         <div>
@@ -51,7 +58,7 @@ const Home = () => {
 
                     <div className='col-lg-6'>
                         <div className='mb-3'>
-                            <TextDisplay highlightedText={highlightedText} />
+                            <TextDisplay highlightedText={highlightedText}  onClearInput={clearInput} />
                         </div>
                     </div>
 

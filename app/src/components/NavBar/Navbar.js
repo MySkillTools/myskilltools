@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import '../../styles/style.scss';
 import './Navbar.scss';
+
+import logo  from '../../assets/images/MSH_Wide.png'
 
 // Navbar Component
 const Navbar = () => {
@@ -16,6 +17,10 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
 
+                        {/* Logo */}
+                        <li className="nav-item px-1">
+                            <img src={logo} style={{maxHeight: '40px'}} alt="Logo"/>
+                        </li>
                         
                         <li className="nav-item">
                             <Link className="nav-link navbar-border active" to="/">Home</Link>
@@ -39,7 +44,7 @@ const Navbar = () => {
                     </ul>
                     
                     <ul className="navbar-nav ms-auto">
-                        
+
                         {/* GitHub */}
                         <li className="nav-item">
                             <a className="nav-link navbar-border" href="https://github.com/stewebb/MSH" target="_blank" rel="noopener noreferrer">GitHub</a>
