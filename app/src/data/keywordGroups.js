@@ -1,47 +1,52 @@
 export const keywordGroups = [
     {
-        groupName: "Frontend Basic",
+        category: "Frontend Basic",
         color: "#191970",  // Midnight Blue
-        keywords: ["HTML", "CSS", "JavaScript", "TypeScript", "JS", "TS", "Bootstrap", "Sass", "LESS", "jQuery"]
+        keywords: ["HTML", "CSS", "JavaScript", "TypeScript", "Sass", "LESS",]
     },
     {
-        groupName: "Frontend Frameworks",
+        category: "Frontend Frameworks",
         color: "#483D8B",  // Dark Slate Blue
-        keywords: ["React", "Angular", "Vue", "Next.js", "Nuxt.js", "Svelte"]
+        keywords: ["React", "Angular", "Vue", "Next.js", "Nuxt.js", "Svelte", "Bootstrap",  "jQuery"]
     },
     {
-      groupName: "Java",
+      category: "Java",
       color: "#6a4c93",  // Dark Orchid
-      keywords: ["Java", "Spring", "Hibernate", "Spring Boot", "JPA", "Maven"]
+      keywords: ["Java", "Spring", "Hibernate", "JPA", "Maven", "Tomcat"]
     },
     {
-      groupName: "Relational Database",
+        category: ".NET",
+        color: "#fa4c93",  // Dark Orchid
+        keywords: [".NET", "C#", "ASPX"]
+      },
+    {
+      category: "Relational Database",
       color: "#00758f",  // Teal Blue
-      keywords: ["RDBMS", "Relational", "MySQL", "PostgreSQL", "Oracle SQL", "MS SQL Server"]
+      keywords: ["RDBMS", "Relational", "MySQL", "PostgreSQL", "Oracle", "SQL Server"]
     },
     {
-      groupName: "Cloud and DevOps",
+      category: "Cloud and DevOps",
       color: "#556B2F",  // Dark Olive Green
       keywords: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "CI/CD"]
     },
     {
-      groupName: "NoSQL Database",
+      category: "NoSQL",
       color: "#8B4513",  // Saddle Brown
-      keywords: ["MongoDB", "Cassandra", "DynamoDB", "Redis"]
+      keywords: ["MongoDB", "Cassandra", "DynamoDB", "Redis", "memcached"]
     },
     {
-      groupName: "Programming Languages",
+      category: "API",
       color: "#2F4F4F",  // Dark Slate Gray
-      keywords: ["Python", "Ruby", "C#", "Go", "Rust", "PHP"]
+      keywords: ["API", "REST", "RESTful", "GraphQL", "JWT", "Json"]
     },
     {
-      groupName: "Experience",
+      category: "Experience",
       color: "#696969",  // Dim Gray
       keywords: ["experience", "year", "mid-level", "junior", "team lead", "senior"]
     },
     {
-      groupName: "Citizen",
+      category: "Citizen",
       color: "#800000",  // Maroon
-      keywords: ["citizen", "permanent residency", "visa", "eligibility"]
+      keywords: ["citizen", "permanent residency", "permanent resident", "PR", "visa", "eligibility", "eligible", "Australian"]
     }
   ];

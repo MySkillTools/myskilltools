@@ -32,7 +32,7 @@ html, body {
  * Source: https://github.com/undercasetype/Fraunces
  */
 
-/*
+
 @font-face {
     font-family: 'Fraunces';
     src: url('../assets/fonts/Fraunces_72pt_Soft-Bold.ttf') format('truetype');
@@ -43,7 +43,6 @@ html, body {
 .fraunces-font {
     font-family: 'Fraunces';
 }
-*/
 
 ::selection {
     background-color: $primary;
@@ -57,14 +56,6 @@ html, body {
   
 .custom-card-header {
     background-color: #ffffff;
-    //color: $primary;
     font-weight: bold;
     font-family: 'Fraunces', serif;
-    //padding: 10px; /* Optional padding to enhance appearance */
 }
-
-//.h-center {
-//    height: 40px;
-//    line-height: 40px;
-//    text-align: center;
-//}
