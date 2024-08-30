@@ -1,6 +1,5 @@
 /**
  * 
-Forest Green - #228B22
 Cornflower Blue - #6495ED
 Indian Red - #CD5C5C
 Light Slate Gray - #778899
@@ -10,6 +9,80 @@ Sandy Brown - #F4A460
 
 export const keywordGroups = [
 
+    // IT Support: Forest Green
+    {
+        "category": "IT Support",
+        "color": "#228B22",
+        "keywords": [
+            "IT Support",
+            "Help Desk",
+            "Technical Support",
+            "Customer Service",
+            "Troubleshooting",
+            "Remote Support",
+            "Network Support",
+            "Desktop Support",
+            "System Administration",
+            "Windows Server",
+            "Linux Administration",
+            "MacOS Support",
+            "Active Directory",
+            "AD",
+            "GPO",
+            "Group Policy",
+            "DNS",
+            "DHCP",
+            "TCP/IP",
+            "VPN",
+            "Firewall",
+            "Antivirus",
+            "Endpoint Security",
+            "Patch Management",
+            "Incident Management",
+            "Service Desk",
+            "ITIL",
+            "Ticketing System",
+            "Jira",
+            "ServiceNow",
+            "Zendesk",
+            "Remote Desktop",
+            "VMware",
+            "Hyper-V",
+            "Backup Solutions",
+            "Disaster Recovery",
+            "Data Recovery",
+            "Printer Support",
+            "Hardware Support",
+            "Software Installation",
+            "Command Line",
+            "PowerShell",
+            "Bash Scripting",
+            "Network Monitoring",
+            "SNMP",
+            "VoIP",
+            "Office 365",
+            "365",
+            "Exchange Server",
+            "Google Workspace",
+            "SCCM",
+            "Asset Management",
+            "User Account Management",
+            "Group Policy",
+            "LDAP",
+            "Microsoft Teams",
+            "Slack",
+            "Zoom",
+            "Endpoint Management",
+            "Cloud Services Support",
+            "AWS",
+            "Azure",
+            "Google Cloud",
+            "Customer Satisfaction",
+            "Knowledge Base"
+        ]
+    },
+
+    
     // Ruby: Dark Khaki
     {
         "category": "Ruby",
@@ -268,6 +341,7 @@ export const keywordGroups = [
         "color": "#191970",
         "keywords": [
             "frontend",
+            "DOM",
             "front end",
             "HTML", 
             "HTML5",
@@ -593,6 +667,7 @@ export const keywordGroups = [
         "category": "Working Authorization",
         "color": "#800000",  // Maroon
         "keywords": [
+            "Cover Letter",
             "citizen",
             "permanent residency",
             "permanent resident",
