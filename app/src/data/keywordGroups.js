@@ -406,7 +406,9 @@ export const keywordGroups = [
             "Backbone",
             "Alpine.js",
             "Chakra UI",
-            "Ant Design"
+            "Ant Design",
+            "Single Page Application",
+            "SPA"
         ]
     },
     
@@ -518,12 +520,14 @@ export const keywordGroups = [
             "Google Cloud",
             "IBM Cloud",
             "Oracle Cloud",
-            "DigitalOcean",
+            "Digital Ocean",
             "Docker",
             "Kubernetes",
             "CI/CD",
+            "CI",
+            "CD",
             "Jenkins",
-            "GitLab CI",
+            "GitLab",
             "GitHub Actions",
             "Terraform",
             "Ansible",
@@ -545,6 +549,8 @@ export const keywordGroups = [
             "CloudWatch",
             "Azure Monitor",
             "Cloud Security",
+            "BitBucket",
+            "GitHub",
             "Infrastructure as Code (IaC)"
         ]
     },

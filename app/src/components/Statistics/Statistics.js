@@ -24,20 +24,20 @@ const Statistics = ({ stats }) => {
                 <h5 className='mb-0'>Statistics</h5>
             </div>
             <div className="card-body statistics-box">
-                {Object.keys(groupedStats).length > 0 ? (
+                
+                
                     <div className='row'>
                         {Object.keys(groupedStats).map((category, idx) => (
                             <div key={idx} className='col-xl-3 col-lg-3 col-md-6 col-xs-6 col-sm-6'> {/* Grid columns for layout */}
                                 <div className='category-section mb-3' style={{ backgroundColor: hexToRGBA(groupedStats[category].color, 0.1) }}>
 
                                     {/* Category Name */}
-                                    <span className='fw-bold' style={{ color: groupedStats[category].color }}>
+                                    <span className='fw-bold px-2' style={{ color: groupedStats[category].color }}>
                                         {category}
                                     </span>
 
                                     {/* Keyword List */}
-                                    
-                                    <ul className="list-group p-1">
+                                    <ul className="list-group px-2 py-1">
                                         {groupedStats[category].items.map((item, index) => (
                                             <li key={index} className="list-group-item">
                                                 <span className="keyword">{item.keyword}</span>&nbsp;
@@ -49,9 +49,7 @@ const Statistics = ({ stats }) => {
                             </div>
                         ))}
                     </div>
-                ) : (
-                    <p>No keywords to display.</p>
-                )}
+                
             </div>
         </div>
     );
