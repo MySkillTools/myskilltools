@@ -1,4 +1,5 @@
 import React from 'react';
+import './HighlightedResult.scss'
 
 const TextDisplay = ({ highlightedText, onClearInput }) => {
     return (
@@ -10,7 +11,7 @@ const TextDisplay = ({ highlightedText, onClearInput }) => {
                 <button className='btn btn-outline-secondary btn-sm' onClick={onClearInput}>Clear</button>
             </div>
 
-            <div className="card-body">
+            <div className="card-body result-box">
                 <div
                     dangerouslySetInnerHTML={{ __html: highlightedText }}
                     style={{ whiteSpace: 'pre-wrap' }}

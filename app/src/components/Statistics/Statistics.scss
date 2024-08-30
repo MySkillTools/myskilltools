@@ -1,0 +1,6 @@
+.statistics-box {
+
+    // 40px: Navbar; 375px: Text input; 50px: Card Header; 3rem: py-3 * 3
+    height: calc(100vh - 40px - 375px - 50px - 3rem);
+    overflow-y: auto;
+}

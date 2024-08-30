@@ -1,4 +1,5 @@
 import React from 'react';
+import './Statistics.scss';
 
 const hexToRGBA = (hex, alpha = 1) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -22,7 +23,7 @@ const Statistics = ({ stats }) => {
             <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
                 <h5 className='mb-0'>Statistics</h5>
             </div>
-            <div className="card-body">
+            <div className="card-body statistics-box">
                 {Object.keys(groupedStats).length > 0 ? (
                     <div className='row'>
                         {Object.keys(groupedStats).map((category, idx) => (

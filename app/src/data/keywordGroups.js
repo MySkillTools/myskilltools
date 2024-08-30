@@ -511,6 +511,8 @@ export const keywordGroups = [
         "keywords": [
             "DevOps", 
             "AWS",
+            "S3",
+            "EC2",
             "Amazon Web Service",
             "Azure",
             "Google Cloud",
@@ -698,7 +700,12 @@ export const keywordGroups = [
             "asylum",
             "refugee status",
             "Blue Card",
-            "EU citizen"
+            "EU citizen",
+            "clearance",
+            "Baseline",
+            "NV1",
+            "NV2",
+            "PV"
         ]
     },
 
