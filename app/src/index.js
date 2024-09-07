@@ -12,6 +12,7 @@ import favicon from './assets/images/MSH_Square.png';
 
 // Lazy loaded Pages
 const Home = lazy(() => import('./pages/Home/Home'));
+const Highlighter = lazy(() => import('./pages/Highlighter/Highlighter'));
 
 // Function to dynamically set favicon
 const setFavicon = (faviconPath) => {
@@ -29,7 +30,8 @@ root.render(
         <Router>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/highlighter" element={<Highlighter />} />
                 </Routes>
             </Suspense>
         </Router>

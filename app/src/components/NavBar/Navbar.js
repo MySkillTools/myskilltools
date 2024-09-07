@@ -1,13 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.scss';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/MSH_Wide.png';
+import './Navbar.scss';
 
 // Navbar Component
 const Navbar = () => {
+
+    const location = useLocation();
+    const currentPath = location.pathname;
+
     return (
         <nav className="navbar navbar-expand-sm no-padding pt-0 pb-0">
             <div className="container-fluid d-flex align-items-center">
+
                 {/* Logo */}
                 <div className="d-flex align-items-center">
                     <img src={logo} style={{ maxHeight: '40px' }} alt="Logo" />
@@ -29,12 +34,13 @@ const Navbar = () => {
                 {/* Navbar Items */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
-                        <li className="nav-item px-1">
-                            <Link className="nav-link navbar-border active" to="/">Home</Link>
+                        <li className="nav-item">
+                            <Link className={`nav-link navbar-border ${currentPath === '/' ? 'active' : ''}`} to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link navbar-border" to="/about">About</Link>
+                            <Link className={`nav-link navbar-border ${currentPath === '/highlighter' ? 'active' : ''}`} to="/highlighter">Highlighter</Link>
                         </li>
+                        
                     </ul>
 
                     <ul className="navbar-nav ms-auto">
