@@ -11,7 +11,7 @@ const Home = () => {
             <Navbar />
 
             <div className='container-fluid'>
-                <div className="row mb-3">
+                <div className="mb-3">
                     <Hero 
                         logo={logo} 
                         title='My Skill Highlighter'
@@ -22,8 +22,8 @@ const Home = () => {
             </div>
 
             <div className="container">
-                <div className="row">
-                        <Features />
+                <div className="mb-3">
+                    <Features />
                 </div>  
             </div>
             
