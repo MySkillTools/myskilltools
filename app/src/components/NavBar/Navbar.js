@@ -45,7 +45,9 @@ const Navbar = () => {
 
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link navbar-border" href="https://github.com/stewebb/MSH" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a className="nav-link navbar-border" href="https://github.com/stewebb/MSH" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -54,5 +56,4 @@ const Navbar = () => {
     );
 };
 
-// Export the Navbar component
 export default Navbar;

@@ -17,7 +17,7 @@ const Hero = ({ logo, title, description, link }) => {
             </div>
 
             <div className='text-center'>
-                <Link className='btn btn-outline-primary' to={`/${link}`}>Get Started</Link>
+                <Link className='btn btn-outline-primary btn-lg' to={`/${link}`}>Get Started</Link>
             </div>
         </div>
     );

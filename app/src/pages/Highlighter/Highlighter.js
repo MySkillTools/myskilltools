@@ -47,7 +47,7 @@ const Highlighter = () => {
 
 
     return (
-        <div>
+        <div className='disable-scroll-page'>
             <Navbar />
 
             <div className='container-fluid'>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './Item.scss';
+import './FeatureItem.scss';
 
 // Function to lighten a color by a given percentage
 const lightenColor = (color, percent) => {
@@ -19,50 +19,63 @@ const getTextColorBasedOnBackground = (color) => {
   return color; // Placeholder return
 };
 
-function Item({ linkText, textColor, bgColor }) {
+function FeatureItem({ feature, icon, description }) {
     const [overlayBgColor, setOverlayBgColor] = useState('');
 
-    const boxBgColor = lightenColor(bgColor, 40);
-    const btnBgColor = getTextColorBasedOnBackground(boxBgColor);
+    //const boxBgColor = lightenColor(bgColor, 40);
+    //const btnBgColor = getTextColorBasedOnBackground(boxBgColor);
+
+    
+    //console.log("Primary color is:", primaryColor);
+
+    //const handleMouseOver = () => {
+    //    setOverlayBgColor(bgColor);
+    //};
 
     return (
         
-        <div className="col-xl-3 col-lg-4 col-sm-6 menu-col">
-            <div className="item p-1">
+        <div className="col-lg-4 col-sm-6 menu-col">
 
-                {/*
-                <div className="banner-container">
-                    <img src={imageUrl} alt={linkText} />
-                </div>
-                */}
-
-                <div>
-                    Hello
+            <div className="item">
+                <div className='text-center py-5 px-2'>
+                    <div className='mb-3 text-primary'>
+                        <i className={`${icon} big-icon`}></i>
+                    </div>
+                    <div className='fs-5 fraunces-font text-secondary'>
+                        {feature}
+                    </div>
                 </div>
 
                 <div className="overlay" 
-                    onMouseOver={() => setOverlayBgColor(boxBgColor)}
-                    onMouseOut={() => setOverlayBgColor('')}
-                    style={{ backgroundColor: overlayBgColor }}
+                    //onMouseOver={handleMouseOver}
+                    //onMouseOut={() => setOverlayBgColor('')}
+                    //style={{ backgroundColor: overlayBgColor }}
                 >
 
+                <div className='mx-2 fw-bold text-secondary'>
+                    {description}
+                </div>
+                    
+
+                    {/*
                     <div className="btn-group" role="group">
-                        <button type="button" className={`btn btn-outline-${btnBgColor}`}>
+                        <button type="button" className={`btn btn-outline-primary`}>
                             Visit
                         </button>
 
-                        <button type="button" className={`btn btn-outline-${btnBgColor}`}>
+                        <button type="button" className={`btn btn-outline-primary`}>
                             About
                         </button>
 
-                        <button type="button" className={`btn btn-outline-${btnBgColor}`}>
+                        <button type="button" className={`btn btn-outline-primary`}>
                             Share
                         </button>
                     </div>
+                    */}
                 </div>
             </div>
         </div>
   );
 }
 
-export default Item;
+export default FeatureItem;
