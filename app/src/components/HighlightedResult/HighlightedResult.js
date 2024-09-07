@@ -7,7 +7,7 @@ const TextDisplay = ({ highlightedText, onClearInput }) => {
         <div className="card">
             
             <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
-                <h5 className='mb-0'>Highlighted Results</h5>
+                <h5 className='mb-0'>Results</h5>
                 <button className='btn btn-outline-secondary btn-sm' onClick={onClearInput}>Clear</button>
             </div>
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import './Statistics.scss';
+//import experience from '../../utils/experience';
+
+import './Analysis.scss';
 
 const hexToRGBA = (hex, alpha = 1) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -8,7 +10,7 @@ const hexToRGBA = (hex, alpha = 1) => {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-const Statistics = ({ stats }) => {
+const Analysis = ({ stats }) => {
     // Function to group stats by category
     const groupedStats = stats.reduce((acc, item) => {
         if (!acc[item.category]) {
@@ -21,10 +23,9 @@ const Statistics = ({ stats }) => {
     return (
         <div className="card">
             <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
-                <h5 className='mb-0'>Statistics</h5>
+                <h5 className='mb-0'>Analysis</h5>
             </div>
             <div className="card-body statistics-box">
-                
                 
                     <div className='row'>
                         {Object.keys(groupedStats).map((category, idx) => (
@@ -55,4 +56,4 @@ const Statistics = ({ stats }) => {
     );
 };
 
-export default Statistics;
+export default Analysis;

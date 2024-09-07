@@ -4,8 +4,10 @@ import './Home.scss';
 import Navbar from '../../components/NavBar/Navbar';
 import TextInput from '../../components/TextInput/TextInput';
 import TextDisplay from '../../components/HighlightedResult/HighlightedResult';
-import Statistics from '../../components/Statistics/Statistics';
+import Analysis from '../../components/Analysis/Analysis';
 import { keywordGroups } from '../../data/keywordGroups';
+
+import experience from '../../utils/experience';
 
 const Home = () => {
     const [text, setText] = useState('');
@@ -13,6 +15,7 @@ const Home = () => {
     const [stats, setStats] = useState([]);
 
     const highlightKeywords = (inputText) => {
+        console.log(experience(inputText));
         let outputText = inputText;
         let keywordStats = [];
 
@@ -54,13 +57,13 @@ const Home = () => {
                             <TextInput text={text} setText={setText} triggerHighlight={() => highlightKeywords(text)} />
                         </div>
                         <div className='mb-3'>
-                            <Statistics stats={stats} />
+                            <TextDisplay highlightedText={highlightedText}  onClearInput={clearInput} />
                         </div>
                     </div>
 
                     <div className='col-lg-6'>
                         <div className='mb-3'>
-                            <TextDisplay highlightedText={highlightedText}  onClearInput={clearInput} />
+                            <Analysis stats={stats} />    
                         </div>
                     </div>
 
