@@ -3,7 +3,7 @@ import './Highlighter.scss';
 
 import Navbar from '../../components/NavBar/Navbar';
 import TextInput from '../../components/TextInput/TextInput';
-import TextDisplay from '../../components/HighlightedResult/HighlightedResult';
+import TextDisplay from '../../components/Result/Result';
 import Analysis from '../../components/Analysis/Analysis';
 import { keywordGroups } from '../../data/keywordGroups';
 
