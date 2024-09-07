@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Disabling global scrolling for large devices
+@include media-breakpoint-up(lg) {
+    body {
+        overflow: hidden; 
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -8,10 +8,10 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import './styles/style.scss';
 
 // Resources
-import favicon from './assets/images/MSH_Square.png'
+import favicon from './assets/images/MSH_Square.png';
 
-// Pages
-import Home from './pages/Home/Home';
+// Lazy loaded Pages
+const Home = lazy(() => import('./pages/Home/Home'));
 
 // Function to dynamically set favicon
 const setFavicon = (faviconPath) => {
@@ -21,15 +21,17 @@ const setFavicon = (faviconPath) => {
     link.href = faviconPath;
     document.getElementsByTagName('head')[0].appendChild(link);
 };
-
 setFavicon(favicon);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </Suspense>
         </Router>
     </React.StrictMode>
 );

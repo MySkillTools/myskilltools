@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Home.scss';
+
 import Navbar from '../../components/NavBar/Navbar';
 import TextInput from '../../components/TextInput/TextInput';
 import TextDisplay from '../../components/HighlightedResult/HighlightedResult';
