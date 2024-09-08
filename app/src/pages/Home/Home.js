@@ -3,6 +3,8 @@ import Hero from "../../components/Hero/Hero";
 import Features from "../../components/Features/Features";
 import About from "../../About/About";
 
+import './Home.scss';
+
 import logo from '../../assets/images/MSH_Square.png';
 
 const Home = () => {
@@ -25,13 +27,21 @@ const Home = () => {
             <div className="container">
                 <div className="mb-3">
                     <Features />
-                </div>  
+                </div>     
+            </div>
 
-                <div className="mb-3">
+            <div className='container-fluid about'>
+                <div className="container mb-3">
                     <About />
                 </div>  
             </div>
-            
+
+            <div>
+                <i className="devicon-react-original colored" style={{ fontSize: '48px' }}></i>
+                <i className="devicon-nodejs-plain colored" style={{ fontSize: '48px' }}></i>
+                <i className="devicon-python-plain" style={{ fontSize: '48px' }}></i>
+            </div>
+
             
         </div>
     )
