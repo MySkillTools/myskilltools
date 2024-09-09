@@ -5,21 +5,34 @@ import Navbar from '../../components/NavBar/Navbar';
 import TextInput from '../../components/TextInput/TextInput';
 import TextDisplay from '../../components/Result/Result';
 import Analysis from '../../components/Analysis/Analysis';
-import { keywordGroups } from '../../data/keywordGroups';
 
+//import { keywordGroups } from '../../data/keywordGroups';
+/**
+ * 
+Cornflower Blue - #6495ED
+Indian Red - #CD5C5C
+Light Slate Gray - #778899
+Rosy Brown - #BC8F8F
+Sandy Brown - #F4A460
+ */
 import experience from '../../utils/experience';
+
+import skills from '../../data/skills.json';
 
 const Highlighter = () => {
     const [text, setText] = useState('');
     const [highlightedText, setHighlightedText] = useState('');
     const [stats, setStats] = useState([]);
 
+    console.log(skills);
+
     const highlightKeywords = (inputText) => {
-        console.log(experience(inputText));
+
+        //console.log(experience(inputText));
         let outputText = inputText;
         let keywordStats = [];
 
-        keywordGroups.forEach(group => {
+        skills.forEach(group => {
             group.keywords.forEach(keyword => {
                 const regex = new RegExp(`\\b(${keyword})(?:s)?(?![\\w#])[.,]?`, 'gi');
                 const matches = inputText.match(regex);
