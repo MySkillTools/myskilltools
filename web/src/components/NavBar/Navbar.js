@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/MSH_Wide.png';
+import logo from '../../assets/images/MySkillTools_Square.png';
 import './Navbar.scss';
 
 // Navbar Component
@@ -15,7 +15,7 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <div className="d-flex align-items-center">
-                    <img src={logo} style={{ maxHeight: '40px' }} alt="Logo" />
+                    <img src={logo} style={{ maxHeight: '40px' }} alt="Logo" />&nbsp;
                 </div>
 
                 {/* Navbar Toggler */}
@@ -35,34 +35,45 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
                         
+                        {/* Home */}
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/' ? 'active' : ''}`} to="/">Home</Link>
                         </li>
+
+                        {/* Dashboard */}
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/dashboard' ? 'active' : ''}`} to="/dashboard">Dashboard</Link>
                         </li>
+
+                        {/* Skills */}
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/skills' ? 'active' : ''}`} to="/skills">Skills</Link>
                         </li>
+
+                        {/* Templates */}
                         <li className="nav-item">
-                            <Link className={`nav-link navbar-border ${currentPath === '/resumes' ? 'active' : ''}`} to="/resumes">Resumes</Link>
+                            <Link className={`nav-link navbar-border ${currentPath === '/templates' ? 'active' : ''}`} to="/templates">Templates</Link>
                         </li>
+
+                        {/* Jobs */}
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/jobs' ? 'active' : ''}`} to="/jobs">Jobs</Link>
                         </li>
-                        
                     </ul>
 
                     <ul className="navbar-nav ms-auto">
 
-                        {/*
-                        <li className="nav-item">
-                            <a className="nav-link navbar-border" href="https://github.com/stewebb/MSH" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
+                        {/* Settings */}
+                        <li className="nav-item navbar-border dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Settings
                             </a>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a className="dropdown-item" href="#/profile">Profile</a>
+                                <a className="dropdown-item" href="#/settings">Settings</a>
+                                <a className="dropdown-item" href="#/logout">Logout</a>
+                            </div>
                         </li>
-                        */}
-
                     </ul>
                 </div>
             </div>

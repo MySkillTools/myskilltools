@@ -6,7 +6,7 @@ import PoweredBy from "../../components/PoweredBy/PoweredBy";
 
 import './Home.scss';
 
-import logo from '../../assets/images/MSH_Square.png';
+//import logo from '../../assets/images/MSH_Square.png';
 
 const Home = () => {
 

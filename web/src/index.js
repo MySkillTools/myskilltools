@@ -10,7 +10,7 @@ import 'devicon/devicon.min.css';
 import './styles/style.scss';
 
 // Resources
-import favicon from './assets/images/MSH_Square.png';
+import favicon from './assets/images/MySkillTools_Square.png';
 
 // Lazy loaded Pages
 const Home = lazy(() => import('./pages/Home/Home'));
