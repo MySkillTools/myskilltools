@@ -14,6 +14,7 @@ const Home = () => {
         <div>
             <Navbar />
 
+            {/*
             <div className='container-fluid'>
                 <div className="mb-3">
                     <Hero 
@@ -42,6 +43,7 @@ const Home = () => {
                     <PoweredBy />
                 </div>     
             </div>
+            */}
 
             
         </div>

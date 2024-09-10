@@ -34,21 +34,35 @@ const Navbar = () => {
                 {/* Navbar Items */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
+                        
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/' ? 'active' : ''}`} to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link navbar-border ${currentPath === '/highlighter' ? 'active' : ''}`} to="/highlighter">Highlighter</Link>
+                            <Link className={`nav-link navbar-border ${currentPath === '/dashboard' ? 'active' : ''}`} to="/dashboard">Dashboard</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className={`nav-link navbar-border ${currentPath === '/skills' ? 'active' : ''}`} to="/skills">Skills</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className={`nav-link navbar-border ${currentPath === '/resumes' ? 'active' : ''}`} to="/resumes">Resumes</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className={`nav-link navbar-border ${currentPath === '/jobs' ? 'active' : ''}`} to="/jobs">Jobs</Link>
                         </li>
                         
                     </ul>
 
                     <ul className="navbar-nav ms-auto">
+
+                        {/*
                         <li className="nav-item">
                             <a className="nav-link navbar-border" href="https://github.com/stewebb/MSH" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </li>
+                        */}
+
                     </ul>
                 </div>
             </div>
