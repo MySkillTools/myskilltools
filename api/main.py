@@ -23,7 +23,9 @@ api.add_resource(SectorResource, API_prefix + '/sectors', API_prefix + '/sectors
 
 api.add_resource(CategoryResource, API_prefix + '/categories', API_prefix + '/categories/<string:category_id>')
 #api.add_resource(CategoryResource, API_prefix + '/categories')
-api.add_resource(SkillResource, API_prefix + '/skills')
+#api.add_resource(SkillResource, API_prefix + '/skills')
+api.add_resource(SkillResource, API_prefix + '/skills', API_prefix + '/skills/<string:skill_id>')
+
 
 if __name__ == '__main__':
     with app.app_context():

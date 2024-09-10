@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './SkillMenu.scss';
 
-/**
- * 
- * [
-    {
-        "sector_id": "1",
-        "color": "#4287f5",
-        "name": "IT",
-        "last_modified": null
-    },
-    {
-        "sector_id": "2",
-        "color": "#f54242",
-        "name": "General",
-        "last_modified": null
-    }
-]
- */
+import { useApiData } from '../../hooks/apiHooks';
 
-// Simulated API call functions
-const fetchSectors = () => {
-    return new Promise(resolve => setTimeout(() => resolve([
-        { id: 1, sector: "Technology", color: "#4287f5" },  // Assigning colors
-        { id: 2, sector: "Finance", color: "#f54242" }
-    ]), 100));
-};
+/*
+const fetchSectors = async () => {
+    try {
+      const response = await fetch('/sectors');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
+  };
+
 
 const fetchCategories = (sectorId) => {
     const data = {
@@ -40,7 +31,7 @@ const fetchCategories = (sectorId) => {
     };
     return new Promise(resolve => setTimeout(() => resolve(data[sectorId]), 100));
 };
-
+*/
 const fetchSkills = (categoryId) => {
     const data = {
         1: ["JavaScript", "Python", "Java"],
@@ -52,22 +43,29 @@ const fetchSkills = (categoryId) => {
 };
 
 function SkillMenu() {
-    const [sectors, setSectors] = useState([]);
-    const [categories, setCategories] = useState([]);
+    //const [sectors, setSectors] = useState([]);
+    const { data: sectors, loading: loadingSectors, error: errorSectors } = useApiData('/sectors'); 
+
+    //if(sectors) {
+    //console.log(sectors);
+    //}
+    
+
+    //const [categories, setCategories] = useState([]);
     const [skills, setSkills] = useState([]);
 
     const [selectedSector, setSelectedSector] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     // Fetch sectors initially
-    useEffect(() => {
-        fetchSectors().then(setSectors);
-    }, []);
+    //useEffect(() => {
+    //    fetchSectors().then(setSectors);
+    //}, []);
 
     // Fetch categories when a sector is selected
     useEffect(() => {
         if (selectedSector) {
-            fetchCategories(selectedSector.id).then(setCategories);
+            fetchCategories(selectedSector.sector_id).then(setCategories);
             setSkills([]);  // Clear skills when changing sector
         }
     }, [selectedSector]);
@@ -92,18 +90,18 @@ function SkillMenu() {
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Sector</h5>
                             <div>
-                                {sectors.map(sector => (
+                                {sectors && sectors.map(sector => (
                                     <button type="button"
-                                            className={`item ${selectedSector?.id === sector.id ? 'active' : ''}`}
-                                            key={sector.id}
+                                            className={`item ${selectedSector?.sector_id === sector.sector_id ? 'active' : ''}`}
+                                            key={sector.sector_id}
                                             onClick={() => setSelectedSector(sector)}
                                             style={{
-                                                backgroundColor: selectedSector?.id === sector.id ? sector.color : '#FFF',
+                                                backgroundColor: selectedSector?.sector_id === sector.sector_id ? sector.color : '#FFF',
                                                 borderColor: sector.color,
-                                                color: selectedSector?.id === sector.id ? '#fff' : sector.color
+                                                color: selectedSector?.sector_id === sector.sector_id ? '#fff' : sector.color
                                             }}
                                     >
-                                        {sector.sector}
+                                        {sector.name}
                                     </button>
                                 ))}
                             </div>

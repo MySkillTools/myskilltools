@@ -24,7 +24,14 @@ const apiRequest = async (endpoint, method = 'GET', payload = null, headers = {}
         }
 
         const response = await fetch(`${API_URL}${endpoint}`, options);
-        return response;
+        if (response.ok) {
+            const jsonResponse = await response.json(); // Parse JSON body of response
+            //console.log(jsonResponse);
+            return jsonResponse; // Return the parsed JSON
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+        //return response;
 
     } catch (error) {
         console.error('API Error:', error);
