@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.sector-menu {
+    background-color: $primary-400;
+    border-radius: 10px; 
+    border: 1px solid $primary;
+
+    .item {
+        user-select: none;
+        padding: .375rem .75rem;
+        background-color: #FFFFFF;
+        border: 1px dashed $primary;
+        color: $primary;
+        //font-weight: bold;
+        border-radius: .25rem;
+        margin: 5px 5px; 
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        
+        &:hover {
+            color: #FFFFFF;
+            background-color: $primary;
+            border-color: darken($primary, 5%);
+            text-decoration: none;
+        }
+
+        &:focus, &:active {
+            box-shadow: 0 0 0 0.2rem rgba($primary, .5);
+            outline: 0;
+        }
+
+        &:active {
+            background-color: darken($primary, 10%);
+            border-color: darken($primary, 15%);
+            box-shadow: 0 0 0 0.3rem rgba($primary, .5);
+        }
+
+        &:disabled {
+            color: $primary-900;
+            background-color: $primary-500;
+            border-color: $primary-600;
+            cursor: not-allowed;
+            opacity: 0.65;
+            pointer-events: none;
+            box-shadow: none;
+        } 
+    }
+
+    .active {
+        background-color: $primary;
+        color: #FFFFFF;
+    }
+}
