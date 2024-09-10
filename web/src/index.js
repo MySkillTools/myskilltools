@@ -14,6 +14,7 @@ import favicon from './assets/images/MySkillTools_Square.png';
 
 // Lazy loaded Pages
 const Home = lazy(() => import('./pages/Home/Home'));
+const Skills = lazy(() => import('./pages/Skills/Skills'));
 const Highlighter = lazy(() => import('./pages/Highlighter/Highlighter'));
 
 // Function to dynamically set favicon
@@ -33,6 +34,7 @@ root.render(
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/skills" element={<Skills />} />
                 <Route path="/highlighter" element={<Highlighter />} />
                 </Routes>
             </Suspense>

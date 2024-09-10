@@ -1,4 +1,5 @@
 import Navbar from "../../components/NavBar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import Features from "../../components/Features/Features";
 import About from "../../components/About/About";
@@ -11,8 +12,12 @@ import './Home.scss';
 const Home = () => {
 
     return (
-        <div>
+        <div id="app">
             <Navbar />
+
+            
+            <Footer />
+            
 
             {/*
             <div className='container-fluid'>
