@@ -1,3 +1,4 @@
+from datetime import datetime
 from . import db
 
 class Skill(db.Model):
@@ -13,5 +14,5 @@ class Skill(db.Model):
             'skill_id': self.skill_id,
             'name': self.name,
             'category_id': self.category_id,
-            'last_modified': self.last_modified
+            'last_modified': self.last_modified.strftime('%Y-%m-%d %H:%M:%S') if self.last_modified else None
         }

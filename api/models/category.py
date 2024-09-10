@@ -1,3 +1,4 @@
+from datetime import datetime
 from . import db
 
 class Category(db.Model):
@@ -15,5 +16,5 @@ class Category(db.Model):
             'color': self.color,
             'name': self.name,
             'sector_id': self.sector_id,
-            'last_modified': self.last_modified
+            'last_modified': self.last_modified.strftime('%Y-%m-%d %H:%M:%S') if self.last_modified else None
         }
