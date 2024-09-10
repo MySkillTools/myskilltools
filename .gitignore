@@ -182,3 +182,5 @@ migrations/
 
 # Type checking and linting files
 .mypy_cache/
+
+static/
