@@ -32,30 +32,37 @@ const fetchCategories = (sectorId) => {
     return new Promise(resolve => setTimeout(() => resolve(data[sectorId]), 100));
 };
 */
-const fetchSkills = (categoryId) => {
-    const data = {
-        1: ["JavaScript", "Python", "Java"],
-        2: ["Networks", "Hardware Maintenance", "Helpdesk"],
-        3: ["Taxation", "Bookkeeping", "Financial Planning"],
-        4: ["Loans", "Savings Accounts", "Investment"]
-    };
-    return new Promise(resolve => setTimeout(() => resolve(data[categoryId]), 100));
-};
+//const fetchSkills = (categoryId) => {
+//    const data = {
+//        1: ["JavaScript", "Python", "Java"],
+//        2: ["Networks", "Hardware Maintenance", "Helpdesk"],
+//        3: ["Taxation", "Bookkeeping", "Financial Planning"],
+//        4: ["Loans", "Savings Accounts", "Investment"]
+//    };
+//    return new Promise(resolve => setTimeout(() => resolve(data[categoryId]), 100));
+//};
 
 function SkillMenu() {
     //const [sectors, setSectors] = useState([]);
     const { data: sectors, loading: loadingSectors, error: errorSectors } = useApiData('/sectors'); 
+    const [selectedSector, setSelectedSector] = useState(null);
 
-    //if(sectors) {
-    //console.log(sectors);
-    //}
+    //console.log(selectedSector);
+    const { data: categories, loading: loadingCategories, error: errorCategories } = useApiData(
+        selectedSector ? `/categories?sector_id=${selectedSector.sector_id}` : null
+    );    
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    const { data: skills, loading: loadingSkills, error: errorSkills } = useApiData(
+        selectedCategory ? `/skills?category_id=${selectedCategory.category_id}` : null
+    );
+
+    //console.log(skills)
     
 
     //const [categories, setCategories] = useState([]);
-    const [skills, setSkills] = useState([]);
+    //const [skills, setSkills] = useState([]);
 
-    const [selectedSector, setSelectedSector] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState(null);
 
     // Fetch sectors initially
     //useEffect(() => {
@@ -63,19 +70,19 @@ function SkillMenu() {
     //}, []);
 
     // Fetch categories when a sector is selected
-    useEffect(() => {
-        if (selectedSector) {
-            fetchCategories(selectedSector.sector_id).then(setCategories);
-            setSkills([]);  // Clear skills when changing sector
-        }
-    }, [selectedSector]);
+    //useEffect(() => {
+    //    if (selectedSector) {
+    //        fetchCategories(selectedSector.sector_id).then(setCategories);
+    //        setSkills([]);  // Clear skills when changing sector
+    //    }
+    //}, [selectedSector]);
 
     // Fetch skills when a category is selected
-    useEffect(() => {
-        if (selectedCategory) {
-            fetchSkills(selectedCategory.id).then(setSkills);
-        }
-    }, [selectedCategory]);
+    //useEffect(() => {
+    //    if (selectedCategory) {
+    //        fetchSkills(selectedCategory.category_id).then(setSkills);
+    //    }
+    //}, [selectedCategory]);
 
     return (
         <div className="card my-3">
@@ -113,15 +120,15 @@ function SkillMenu() {
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Category</h5>
                             <div>
-                                {categories.map(category => (
+                                {categories && categories.map(category => (
                                     <button type="button"
-                                            className={`item ${selectedCategory?.id === category.id ? 'active' : ''}`}
-                                            key={category.id}
+                                            className={`item ${selectedCategory?.category_id === category.category_id ? 'active' : ''}`}
+                                            key={category.category_id}
                                             onClick={() => setSelectedCategory(category)}
                                             style={{
-                                                backgroundColor: selectedCategory?.id === category.id ? category.color : '#FFF',
+                                                backgroundColor: selectedCategory?.category_id === category.category_id ? category.color : '#FFF',
                                                 borderColor: category.color,
-                                                color: selectedCategory?.id === category.id ? '#fff' : category.color
+                                                color: selectedCategory?.category_id === category.category_id ? '#fff' : category.color
                                             }}
                                     >
                                         {category.name}
@@ -136,7 +143,7 @@ function SkillMenu() {
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Skill</h5>
                             <div>
-                                {skills.map((skill, index) => (
+                                {skills && skills.map((skill, index) => (
                                     <button type="button"
                                             className="item"
                                             key={index}
@@ -146,7 +153,7 @@ function SkillMenu() {
                                                 //color: '#fff'
                                             }}
                                     >
-                                        {skill}
+                                        {skill.name.toString()}
                                     </button>
                                 ))}
                             </div>

@@ -41,11 +41,19 @@ const apiRequest = async (endpoint, method = 'GET', payload = null, headers = {}
 
 // Generalized hook for fetching data from any API endpoint
 const useApiData = (endpoint, method = 'GET', payload = null) => {
+
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
+
+        if (!endpoint) {
+            setError('No endpoint provided');
+            setLoading(false);            
+            return;
+        }
+
         const fetchData = async () => {
             try {
                 const data = await apiRequest(endpoint, method, payload);
