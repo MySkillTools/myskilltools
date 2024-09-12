@@ -1,0 +1,8 @@
+@import '../../../styles/variables';
+
+.custom-card-header {
+    background-color: #ffffff;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    border-top: 2.5px solid $primary;
+}

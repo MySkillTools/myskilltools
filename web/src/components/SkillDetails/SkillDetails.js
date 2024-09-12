@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from '../styled/Card/Card';
 
-function SkillSearch() {
+function SkillDetails() {
+
     /*
     return(
         <div className="card">
             <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
-                <h5 className='mb-0'>Search</h5>
+                <h5 className='mb-0'>Details</h5>
             </div>
 
             <div className="card-body">
@@ -17,8 +18,8 @@ function SkillSearch() {
     */
 
     return(
-        <Card titleText='Search'></Card>
+        <Card titleText='Details'></Card>
     )
 }
 
-export default SkillSearch;
+export default SkillDetails;

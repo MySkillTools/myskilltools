@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './SkillMenu.scss';
 
+import Card from '../styled/Card/Card';
+
 import { useApiData } from '../../hooks/apiHooks';
 
 /*
@@ -84,18 +86,18 @@ function SkillMenu() {
     //    }
     //}, [selectedCategory]);
 
-    return (
-        <div className="card">
-            <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
-                <h5 className='mb-0'>List</h5>
-            </div>
+    const body = (
+        <div>
+        
+        {/* Sectors */}    
+        <div className="fw-bold fs-5">
+            <span className=''>Choose a </span>
+            <span className='fraunces-font text-primary'>Sector</span>
+        </div>
+        
+        <div className="px-2 sector-menu mb-2">
 
-            <div className="card-body">
-                <div className='row'>
-                    {/* Sectors */}
                     
-                        <div className="px-2 sector-menu">
-                            <h5 className="fw-bold pt-1 text-primary">Sector</h5>
                             <div>
                                 {sectors && sectors.map(sector => (
                                     <button type="button"
@@ -116,8 +118,11 @@ function SkillMenu() {
                     
           
                     {/* Categories */}
-                    
-                        <div className="px-2 sector-menu">
+                    <div className="fw-bold fs-5">
+            <span className=''>Choose a </span>
+            <span className='fraunces-font text-primary'>Category</span>
+        </div>
+                        <div className="px-2 sector-menu mb-2">
                             <h5 className="fw-bold pt-1 text-primary">Category</h5>
                             <div>
                                 {categories && categories.map(category => (
@@ -139,7 +144,10 @@ function SkillMenu() {
                     
           
                     {/* Skills */}
-                    
+                    <div className="fw-bold fs-5">
+            <span className=''>Choose a </span>
+            <span className='fraunces-font text-primary'>Skill</span>
+        </div>
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Skill</h5>
                             <div>
@@ -159,10 +167,27 @@ function SkillMenu() {
                             </div>
                         </div>
                     
-                </div>
+                
+    </div>);
+
+    /*
+    return (
+        <div className="card">
+            <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
+                <h5 className='mb-0'>List</h5>
+            </div>
+
+            <div className="card-body">
+                
+               
             </div>
         </div>
     );
+    */
+
+    return (
+        <Card titleText='List' body={body} />
+    )
 }
 
 export default SkillMenu;

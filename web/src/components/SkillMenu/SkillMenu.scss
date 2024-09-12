@@ -1,9 +1,10 @@
 @import '../../styles/variables';
 
 .sector-menu {
-    background-color: $primary-400;
+    //background-color: $primary-400;
     border-radius: 10px; 
     border: 1px solid $primary;
+    min-height: 100px;
 
     .item {
         user-select: none;
