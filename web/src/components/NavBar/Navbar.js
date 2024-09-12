@@ -41,9 +41,11 @@ const Navbar = () => {
                         </li>
 
                         {/* Dashboard */}
+                        {/*
                         <li className="nav-item">
                             <Link className={`nav-link navbar-border ${currentPath === '/dashboard' ? 'active' : ''}`} to="/dashboard">Dashboard</Link>
                         </li>
+    *                   /}
 
                         {/* Skills */}
                         <li className="nav-item">
@@ -62,6 +64,12 @@ const Navbar = () => {
                     </ul>
 
                     <ul className="navbar-nav ms-auto">
+
+                        {/* New Application */}
+                        <li className="nav-item">
+                            <Link className={`nav-link navbar-border ${currentPath === '/new' ? 'active' : ''}`} to="/new">New Application</Link>
+                        </li>
+
 
                         {/* Settings */}
                         <li className="nav-item navbar-border dropdown">

@@ -85,15 +85,15 @@ function SkillMenu() {
     //}, [selectedCategory]);
 
     return (
-        <div className="card my-3">
+        <div className="card">
             <div className='card-header custom-card-header d-flex align-items-center justify-content-between'>
-                <h5 className='mb-0'>Explore</h5>
+                <h5 className='mb-0'>List</h5>
             </div>
 
             <div className="card-body">
                 <div className='row'>
                     {/* Sectors */}
-                    <div className="col-md-4">
+                    
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Sector</h5>
                             <div>
@@ -113,10 +113,10 @@ function SkillMenu() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    
           
                     {/* Categories */}
-                    <div className="col-md-4">
+                    
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Category</h5>
                             <div>
@@ -136,10 +136,10 @@ function SkillMenu() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    
           
                     {/* Skills */}
-                    <div className="col-md-4">
+                    
                         <div className="px-2 sector-menu">
                             <h5 className="fw-bold pt-1 text-primary">Skill</h5>
                             <div>
@@ -158,7 +158,7 @@ function SkillMenu() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
